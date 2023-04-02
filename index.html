@@ -7,15 +7,19 @@
     <title>OXISPHERE</title>
     <link rel="stylesheet" href="estilo.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <!--Encabezado-->
     <div id="div_encabezado" class="container">
         <header>
             <nav>
-                <div class="logo">
-                  <img src="https://www.esencialcostarica.com/eng/wp-content/uploads/2018/02/madisonddb.jpg" alt="Logo de la empresa">
+              <div class="logo">
+                <img src="https://github.com/anibalcastro/OXISPHERE-DDB/blob/main/Images/Transparent-logo.png?raw=true" alt="Logo de la empresa">
+              </div>
+              <div class="menu-responsive">
+                <div class="menu-icon">
+                  <span></span>
                 </div>
                 <ul class="menu">
                   <li><a href="#">INICIO</a></li>
@@ -23,11 +27,19 @@
                   <li><a href="#">PORTAFOLIO</a></li>
                   <li><a href="#">CONTACTO</a></li>
                 </ul>
-              </nav>
-        </header>
+              </div>
+            </nav>
+          </header>
+          
         <div class="container texto_encabezado">
             <h5 id="frase_oxisphere">OXISPHERE DDB A TU ALCANCE</h5>
             <H1 id="titulo_principal">UNA BASE SÓLIDA TE DA UN RESPIRO</H1>
+        </div>
+
+        <div class="container contenedor_flecha">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24">
+                <path fill="#ffffff" d="M12 19l-8-8h16z"/>
+            </svg>
         </div>
     </div>
 
@@ -51,4 +63,13 @@
         <h2>Contacto</h2>
     </div>
 </body>
+
+<script>
+    $(document).ready(function() {
+  $('.menu-icon').click(function() {
+    $(this).toggleClass('open');
+    $('.menu').slideToggle();
+  });
+});
+</script>
 </html>

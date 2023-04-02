@@ -1,78 +1,227 @@
 :root {
-    --main-color-light-blue : #88b2dc;
-    --main-color-beige : #cabaa1;
-    --main-color-font : #ffffff;
-    --main-color-dark-blue : #304663;
-    --font-menu : 'Montserrat';
-    --font-web-page : 'Montserrat Extra-Light';
-    --font-title : 'Montserrat Extra-Bold';
+  --main-color-light-blue: #88b2dc;
+  --main-color-beige: #cabaa1;
+  --main-color-font: #ffffff;
+  --main-color-dark-blue: #304663;
+  --font-menu: 'Montserrat';
+  --font-web-page: 'Montserrat Extra-Light';
+  --font-title: 'Montserrat Extra-Bold';
 
 }
 
-body{
-    margin : 0 !important;
-    padding : 0;
+body {
+  margin: 0 !important;
+  padding: 0;
 }
 
 
-#div_encabezado{
-    background-color: var(--main-color-light-blue);
-    height: 500px;
-    width: 100%;
+#div_encabezado {
+  background-color: var(--main-color-light-blue);
+  height: 600px;
+  width: 100%;
 }
 
-#div_nosotros{
-    background-color: var(--main-color-beige);
-    height: 350px;
+#div_nosotros {
+  background-color: var(--main-color-beige);
+  height: 350px;
 }
 
-#div_equipo{
-    background-color: var(--main-color-dark-blue);
-    height: 350px;
+#div_equipo {
+  background-color: var(--main-color-dark-blue);
+  height: 350px;
 }
 
 #div_proyectos {
-    background-color: var(--main-color-light-blue);
-    height: 350px;
+  background-color: var(--main-color-light-blue);
+  height: 350px;
 }
 
 #div_contacto {
-    background-color: var(--main-color-beige);
-    height: 350px;
+  background-color: var(--main-color-beige);
+  height: 350px;
 }
 
 /*ENCABEZADO*/
 /*Header*/
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo img {
+  height: 80px;
+  width: auto;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-left: 1rem;
+}
+
+.menu li:first-child {
+  margin-left: 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+  font-family: var(--font-menu);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.menu li a:hover {
+  color: black;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid black;
+  /* agregamos una rayita debajo */
+}
+
+.menu li a:active {
+  background-color: #666;
+  /* un color diferente cuando se selecciona */
+  color: #fff;
+}
+
+
+#frase_oxisphere {
+  color: var(--main-color-font);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  /* para Extra Light */
+  letter-spacing: 3px;
+  font-size: 23px;
+  margin-bottom: 0px;
+  width: 465px;
+}
+
+#titulo_principal {
+  color: var(--main-color-font);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  width: 465px;
+  font-size: 60px;
+  margin-top: 16px;
+
+}
+
+.texto_encabezado {
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  height: 284px;
+  width: auto;
+  display: flex;
+  align-content: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contenedor_flecha {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/*RESPONSIVE*/
+
+@media screen and (max-width: 768px) {
+
+  #titulo_principal{
+    width: 300px;
+    font-size: 39px;
+    margin-top: 16px;
+  }
+
+  #frase_oxisphere{
+    width: 300px;
   }
   
-  .logo img {
-    height: 40px;
+
+  #div_encabezado {
+    background-color: var(--main-color-light-blue);
+    height: 600px;
+    width: 100%;
+  }
+
+  .texto_encabezado{
     width: auto;
+    margin-left: 40px;
   }
-  
+
   .menu {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    display: none;
+    text-align: center; /* agregamos centrado de texto */
   }
-  
+
+  .menu-responsive {
+    display: block;
+    position: relative;
+    text-align: right; /* agregamos alineación a la derecha */
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0rem;
+    cursor: pointer;
+    z-index: 1; /* agregamos un índice z para asegurarnos de que esté por encima de otros elementos */
+  }
+
+  .menu-icon span,
+  .menu-icon span::before,
+  .menu-icon span::after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu-icon span::before {
+    transform: translateY(-8px);
+  }
+
+  .menu-icon span::after {
+    transform: translateY(8px);
+  }
+
+  .menu-icon.open span {
+    transform: rotate(45deg);
+  }
+
+  .menu-icon.open span::before {
+    transform: translateY(0) rotate(90deg);
+  }
+
+  .menu-icon.open span::after {
+    transform: translateY(0) rotate(-90deg);
+  }
+
   .menu li {
-    margin-left: 1rem;
+    margin-left: 0; /* cambiamos a 0 para centrar los elementos */
+    margin-bottom: 0.5rem;
+    display: inline-block; /* agregamos para que los elementos se muestren en línea */
   }
-  
-  .menu li:first-child {
-    margin-left: 0;
-  }
-  
+
   .menu li a {
     text-decoration: none;
-    color: #333;
+    color: white;
     padding: 0.5rem;
     font-family: var(--font-menu);
     font-size: 16px;
@@ -80,41 +229,15 @@ nav {
   }
 
   .menu li a:hover {
-    color: #fff;
-    background-color: #333;
+    color: black;
     transition: all 0.3s ease;
+    border-bottom: 2px solid black;
   }
+
+  .menu li a:active {
+    background-color: #666;
+    color: #fff;
+  }
+
   
-  #frase_oxisphere{
-    color: var(--main-color-font);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 200; /* para Extra Light */
-    letter-spacing: 3px;
-    font-size: 23px;
-    margin-bottom: 0px;
-    width: 465;
-  }
-
-  #titulo_principal{
-    color: var(--main-color-font);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    width: 465px;
-    font-size: 60px;
-    margin-top: 16px;
-
-  }
-
-  .texto_encabezado{
-    margin-top: 50px;
-    margin-left: 20px;
-    margin-right: 20px;
-    height: 284px;
-    width: 100%;
-    display: flex;
-    align-content: flex-start;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-
+}
