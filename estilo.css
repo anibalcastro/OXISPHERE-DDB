@@ -1,0 +1,120 @@
+:root {
+    --main-color-light-blue : #88b2dc;
+    --main-color-beige : #cabaa1;
+    --main-color-font : #ffffff;
+    --main-color-dark-blue : #304663;
+    --font-menu : 'Montserrat';
+    --font-web-page : 'Montserrat Extra-Light';
+    --font-title : 'Montserrat Extra-Bold';
+
+}
+
+body{
+    margin : 0 !important;
+    padding : 0;
+}
+
+
+#div_encabezado{
+    background-color: var(--main-color-light-blue);
+    height: 500px;
+    width: 100%;
+}
+
+#div_nosotros{
+    background-color: var(--main-color-beige);
+    height: 350px;
+}
+
+#div_equipo{
+    background-color: var(--main-color-dark-blue);
+    height: 350px;
+}
+
+#div_proyectos {
+    background-color: var(--main-color-light-blue);
+    height: 350px;
+}
+
+#div_contacto {
+    background-color: var(--main-color-beige);
+    height: 350px;
+}
+
+/*ENCABEZADO*/
+/*Header*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .logo img {
+    height: 40px;
+    width: auto;
+  }
+  
+  .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin-left: 1rem;
+  }
+  
+  .menu li:first-child {
+    margin-left: 0;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem;
+    font-family: var(--font-menu);
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .menu li a:hover {
+    color: #fff;
+    background-color: #333;
+    transition: all 0.3s ease;
+  }
+  
+  #frase_oxisphere{
+    color: var(--main-color-font);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200; /* para Extra Light */
+    letter-spacing: 3px;
+    font-size: 23px;
+    margin-bottom: 0px;
+    width: 465;
+  }
+
+  #titulo_principal{
+    color: var(--main-color-font);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    width: 465px;
+    font-size: 60px;
+    margin-top: 16px;
+
+  }
+
+  .texto_encabezado{
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 284px;
+    width: 100%;
+    display: flex;
+    align-content: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+
