@@ -23,7 +23,11 @@ body {
 
 #div_nosotros {
   background-color: var(--main-color-beige);
-  height: 350px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 #div_equipo {
@@ -133,7 +137,67 @@ nav {
   justify-content: center;
 }
 
+/**************************/
+/*PRESENTACION DE AGENCIA*/
+.div_titulo{
+  margin-top: 0px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.nombre_empresa{
+  color: var(--main-color-font);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 55px;
+  height: auto;
+  margin: 0;
+}
+
+
+.descripciones{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text_descripcion_1{
+  margin-top: -15px;
+  color: var(--main-color-font);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  letter-spacing: 0px;
+  font-size: 33px;
+  margin-bottom: 0px;
+  width: 435px;
+  text-align: center;
+}
+
+.container_boton{
+  margin-top: 40px;
+}
+
+
+.btn_solicitud{
+  background-color: var(--main-color-dark-blue); /* Color de fondo del botón */
+  border: none; /* Quitamos los bordes del botón */
+  color: white; /* Color del texto del botón */
+  padding: 10px 19px; /* Espacio interno del botón */
+  text-align: center; /* Centramos el texto del botón */
+  text-decoration: none; /* Quitamos la decoración de enlace del botón */
+  display: inline-block; /* Hacemos que el botón sea un bloque en línea */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 13px; /* Tamaño de fuente del texto del botón */
+  margin: 4px 2px; /* Margen entre botones */
+  cursor: pointer; /* Cambiamos el cursor al pasar sobre el botón */
+  border-radius: 30px; /* Redondeamos las esquinas del botón */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Agregamos una sombra al botón */
+
+}
 /*RESPONSIVE*/
 
 @media screen and (max-width: 768px) {
