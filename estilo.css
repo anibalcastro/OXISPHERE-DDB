@@ -352,6 +352,91 @@ nav {
 
 /*RESPONSIVE*/
 @media screen and (max-width: 768px) {
+
+  #div_contacto{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .imagen_contacto_logo{
+    width: 350px;
+  }
+
+  .contenedor_informacion_contacto{
+    flex-direction: column;
+  }
+
+  #div_proyectos{
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .div_titulo_proyectos{
+    margin-left: 0px;
+    margin-right:0px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .proyectos{
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+
+  .cont_proyecto{
+    padding: 15px;
+  }
+
+  #div_equipo{
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .nombre_empresa{
+    text-align: center;
+    font-size: 45px;
+    width: 258px;
+  }
+
+  .text_descripcion_1{
+    margin-top:0px;
+    font-size: 30px;
+    width: 300px;
+  }
+
+  .somos_oxisphere{
+    text-align: center;
+    width: 100%;
+  }
+
+  .text_somos_1{
+    font-size: 16px;
+    width: 230px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contenedor_somos{
+    margin-top: 50px;
+    padding-top: 20px;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    margin-left: 0px;
+    margin-right:0px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contenedor_info_equipo, .contenedor_info_equipo_2, .contenedor_info_equipo_3{
+    flex-direction: column;
+  }
+
+
   #titulo_principal {
     width: 300px;
     font-size: 39px;
