@@ -3,17 +3,15 @@
   --main-color-beige: #cabaa1;
   --main-color-font: #ffffff;
   --main-color-dark-blue: #304663;
-  --font-menu: 'Montserrat';
-  --font-web-page: 'Montserrat Extra-Light';
-  --font-title: 'Montserrat Extra-Bold';
-
+  --font-menu: "Montserrat";
+  --font-web-page: "Montserrat Extra-Light";
+  --font-title: "Montserrat Extra-Bold";
 }
 
 body {
   margin: 0 !important;
   padding: 0;
 }
-
 
 #div_encabezado {
   background-color: var(--main-color-light-blue);
@@ -32,17 +30,28 @@ body {
 
 #div_equipo {
   background-color: var(--main-color-dark-blue);
-  height: 350px;
+  height: 1150px;
+  display: flex;
+  justify-content: center;
+  align-items: normal;
+  flex-direction: column;
 }
 
 #div_proyectos {
   background-color: var(--main-color-light-blue);
-  height: 350px;
+  height: 1300px;
+  display: flex;
+  align-items: normal;
+  justify-content: center;
+  flex-direction: column;
 }
 
 #div_contacto {
   background-color: var(--main-color-beige);
-  height: 350px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*ENCABEZADO*/
@@ -96,10 +105,9 @@ nav {
   color: #fff;
 }
 
-
 #frase_oxisphere {
   color: var(--main-color-font);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 200;
   /* para Extra Light */
   letter-spacing: 3px;
@@ -110,12 +118,11 @@ nav {
 
 #titulo_principal {
   color: var(--main-color-font);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 900;
   width: 465px;
   font-size: 60px;
   margin-top: 16px;
-
 }
 
 .texto_encabezado {
@@ -139,7 +146,7 @@ nav {
 
 /**************************/
 /*PRESENTACION DE AGENCIA*/
-.div_titulo{
+.div_titulo {
   margin-top: 0px;
   height: 150px;
   display: flex;
@@ -147,27 +154,29 @@ nav {
   justify-content: center;
 }
 
-.nombre_empresa{
+.nombre_empresa,
+.somos_oxisphere,
+.text_proyectos,
+.text_contacto {
   color: var(--main-color-font);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 900;
   font-size: 55px;
   height: auto;
   margin: 0;
 }
 
-
-.descripciones{
+.descripciones {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.text_descripcion_1{
+.text_descripcion_1 {
   margin-top: -15px;
   color: var(--main-color-font);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 200;
   letter-spacing: 0px;
   font-size: 33px;
@@ -176,12 +185,11 @@ nav {
   text-align: center;
 }
 
-.container_boton{
+.container_boton {
   margin-top: 40px;
 }
 
-
-.btn_solicitud{
+.btn_solicitud {
   background-color: var(--main-color-dark-blue); /* Color de fondo del botón */
   border: none; /* Quitamos los bordes del botón */
   color: white; /* Color del texto del botón */
@@ -189,29 +197,170 @@ nav {
   text-align: center; /* Centramos el texto del botón */
   text-decoration: none; /* Quitamos la decoración de enlace del botón */
   display: inline-block; /* Hacemos que el botón sea un bloque en línea */
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 13px; /* Tamaño de fuente del texto del botón */
   margin: 4px 2px; /* Margen entre botones */
   cursor: pointer; /* Cambiamos el cursor al pasar sobre el botón */
   border-radius: 30px; /* Redondeamos las esquinas del botón */
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Agregamos una sombra al botón */
+}
+
+/**************/
+/*SOMOS*/
+
+.contenedor_somos, .div_titulo_proyectos {
+  height: 220px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.text_somos_1 {
+  margin-top: 18px;
+  color: var(--main-color-font);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  letter-spacing: 0px;
+  font-size: 20px;
+  margin-bottom: 0px;
+  width: 700px;
+  text-align: left;
+}
+
+.contenedor_info_equipo, .contenedor_info_equipo_2{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.contenedor_info_equipo_3{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: inherit;
+  flex-direction: row;
+}
+
+.equipo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.equipo_3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+
+.foto_equipo{
+  height: auto;
+  width: 140px;
+  border-radius: 50%;
+}
+
+.nombre_persona{
+  color: var(--main-color-font);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  font-size: 18px;
+}
+
+.puesto_persona{
+  color: var(--main-color-font);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  font-size: 15px;
+  margin-top: -15px;  
+}
+
+
+/*****************/
+/*PROYECTOS*/
+.contenedor_proyectos{
+  margin-top: -35px;
+}
+
+.proyectos{
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly ;
+  flex-direction: row;
+}
+
+.cont_proyectos{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 }
+
+.img_proyecto{
+  height: auto;
+  width: 330px;
+  border-radius: 10%;
+}
+
+/**********************************************/
+/*CONTACTO*/
+
+.contenedor_texto_contacto{
+  margin-top: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagen_contacto_logo{
+  height: auto;
+  width: 400px;
+}
+
+.contenedor_informacion_contacto{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.informacion_contacto, .ubicacion_contacto{
+  color: var(--main-color-dark-blue);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+}
+
+
+.icono{
+  width: 15px;
+  height: auto;
+}
+
+
+
 /*RESPONSIVE*/
-
 @media screen and (max-width: 768px) {
-
-  #titulo_principal{
+  #titulo_principal {
     width: 300px;
     font-size: 39px;
     margin-top: 16px;
   }
 
-  #frase_oxisphere{
+  #frase_oxisphere {
     width: 300px;
   }
-  
 
   #div_encabezado {
     background-color: var(--main-color-light-blue);
@@ -219,7 +368,7 @@ nav {
     width: 100%;
   }
 
-  .texto_encabezado{
+  .texto_encabezado {
     width: auto;
     margin-left: 40px;
   }
@@ -248,7 +397,7 @@ nav {
   .menu-icon span,
   .menu-icon span::before,
   .menu-icon span::after {
-    content: '';
+    content: "";
     display: block;
     width: 25px;
     height: 3px;
@@ -302,6 +451,4 @@ nav {
     background-color: #666;
     color: #fff;
   }
-
-  
 }
